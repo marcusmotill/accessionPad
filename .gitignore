@@ -1,3 +1,12 @@
 node_modules
 client/lib
 _USE_AMY-DEV_FOR_DEV
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+bower_components/*
