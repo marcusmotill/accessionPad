@@ -1,9 +1,19 @@
 angular.module('app.controllers').controller('MainController',
-    function ($scope, $state, $timeout, AuthService, $mdSidenav) {
+    function ($scope, $rootScope, $state, $timeout, AuthService, $mdSidenav) {
+
         if (!AuthService.isLoggedIn()) {
             $state.go('login');
+        } else {
+            $state.go('main.home')
         }
-        $scope.toggleLeft = buildDelayedToggler('left');
+
+        $rootScope.$on('navEvent', function (event, data) {
+            if (data.message === "toggle") {
+                $scope.toggleNav();
+            }
+        });
+
+        $scope.toggleNav = buildDelayedToggler('left');
 
         function debounce(func, wait, context) {
             var timer;

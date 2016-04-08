@@ -39,6 +39,10 @@ angular.module('app.services')
             isLoggedIn: function () {
                 var authData = ref.getAuth();
                 return (authData != null);
+            },
+            getUid: function () {
+                var authData = ref.getAuth();
+                return authData.uid;
             }
         }
 

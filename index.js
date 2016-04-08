@@ -42,19 +42,15 @@ app.on('activate-with-no-open-windows', function () {
 });
 
 app.on('will-quit', function () {
-    console.log('<====================================>');
-    console.log('Amy Says, "Stay Awesome Kids!"');
-    console.log('<====================================>');
+
 });
 
 app.on('ready', function () {
     mainWindow = createMainWindow();
-    console.log('<====================================>');
-    console.log("Amy says, \"Let's Code Awesome!\"");
-    console.log('<====================================>');
+    
     mainWindow.webContents.on('dom-ready', function (e) {
         //try and manually bootstrap AngularJS
-        var code = "angular.bootstrap(document, ['app']);"
+        var code = "angular.bootstrap(document, ['app']);";
         mainWindow.webContents.executeJavaScript(code);
     });
     mainWindow.openDevTools();
@@ -62,7 +58,7 @@ app.on('ready', function () {
         var menu = new Menu();
         var tpl = [
             {
-                label: 'Amy',
+                label: 'AccessionPad',
                 submenu: [
                     {
                         label: 'About Amy',
