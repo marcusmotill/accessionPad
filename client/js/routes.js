@@ -13,7 +13,7 @@ angular.module('app.routes', []).config(function ($stateProvider, $urlRouterProv
             templateUrl: "client/tpl/main.html"
         })
         .state('main.home', {
-            url: "/{accessionId}",
+            url: "/sequence/{accessionId}",
             controller: 'HomeController',
             templateUrl: "client/tpl/home.html"
         })
