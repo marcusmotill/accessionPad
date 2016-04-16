@@ -5,7 +5,7 @@ angular.module('app.directives', [])
             template: '<md-progress-circular md-mode="indeterminate" ng-show="login.loading"></md-progress-circular>'
         }
     })
-    .directive("noSequenceCard", function ($rootScope) {
+    .directive("noSequenceCard", function ($rootScope, $state) {
         return {
             restrict: "E",
             scope: {},
@@ -19,8 +19,8 @@ angular.module('app.directives', [])
                 };
 
                 $scope.newSequence = function () {
-
-                }
+                    $state.go("main.new")
+                };
             }
         }
     });

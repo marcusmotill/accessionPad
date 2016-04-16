@@ -16,5 +16,10 @@ angular.module('app.routes', []).config(function ($stateProvider, $urlRouterProv
             url: "/{accessionId}",
             controller: 'HomeController',
             templateUrl: "client/tpl/home.html"
+        })
+        .state('main.new', {
+            url: "/new",
+            controller: 'NewSequenceController',
+            templateUrl: "client/tpl/newSequence.html"
         });
 });
