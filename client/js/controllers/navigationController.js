@@ -1,8 +1,9 @@
 angular.module('app.controllers').controller('NavigationController',
-    function ($scope, $mdSidenav, AccessionService, $firebaseArray) {
-        $scope.close = function () {
-            $mdSidenav('left').close();
-        };
+    function ($scope, $state, $mdSidenav, AccessionService) {
         $scope.accessions = AccessionService.getAccessions();
 
+        $scope.showAccession = function (accession) {
+            console.log(accession);
+            $state.go("main.home", {accessionId: accession.$id})
+        }
     });

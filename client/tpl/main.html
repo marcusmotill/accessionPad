@@ -13,7 +13,8 @@
             </md-toolbar>
             <md-content ng-controller="NavigationController">
                 <md-list>
-                    <md-list-item class="md-2-line" ng-repeat="accession in accessions" ng-click="null">
+                    <md-list-item class="md-2-line" ng-repeat="accession in accessions"
+                                  ng-click="showAccession(accession)">
                         <div class="md-list-item-text" layout="column">
                             <h3>{{ accession.name }}</h3>
                             <h4>{{ accession.$id }}</h4>
