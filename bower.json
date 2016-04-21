@@ -32,5 +32,7 @@
     "fira-compact": "develephant/fira-compact#~0.1.0",
     "jquery": "~2.1.4",
     "material-design-icons-iconfont": "~2.0.3",
+    "angular-x2js": "^0.2.0",
+    "abdmob/x2js": "^1.2.0"
   }
 }

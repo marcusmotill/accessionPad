@@ -9,7 +9,8 @@ angular.module('app',
         "app.controllers",
         "app.directives",
         "app.services",
-        "app.routes"
+        "app.routes",
+        "cb.x2js"
     ])
     .config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('docs-dark', 'default')

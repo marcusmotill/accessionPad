@@ -18,9 +18,18 @@
                 </div>
                 <md-button class="md-raised md-primary"
                            ng-click="searchForm.$valid && search()">
-                    Add New Sequence
+                    Search for Sequence
                 </md-button>
             </form>
+
+            <md-list>
+                <md-list-item ng-repeat="result in searchResults" class="md-2-line" ng-click="addSequence(result)">
+                    <div class="md-list-item-text">
+                        <h3>{{result.summary.Organism.ScientificName}}</h3>
+                        <p>{{result.summary.Description}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
         </div>
     </md-content>
 </div>

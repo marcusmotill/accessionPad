@@ -13,13 +13,18 @@
             <md-content ng-controller="NavigationController">
                 <md-list>
                     <md-list-item class="md-2-line" ng-repeat="accession in accessions"
-                                  ng-click="showAccession(accession)">
+                                  ng-click="showAccession(accession); toggleNav();">
                         <div class="md-list-item-text" layout="column">
                             <h3>{{ accession.name }}</h3>
-                            <h4>{{ accession.$id }}</h4>
+                            <h4>{{ accession.description }}</h4>
                         </div>
                         <span flex></span>
                         <md-icon>keyboard_arrow_right</md-icon>
+                    </md-list-item>
+                    <md-list-item class="md-1-line" ng-click="openNewSequence(); toggleNav();">
+                        <div class="md-list-item-text">
+                            <h3>Add New</h3>
+                        </div>
                     </md-list-item>
                 </md-list>
             </md-content>

@@ -1,3 +1,17 @@
 <div>
     <no-sequence-card layout-padding ng-if="!hasAccession"></no-sequence-card>
+    <md-content layout="column" ng-if="hasAccession">
+        <h2 flex>Notes:</h2>
+        <md-button ng-click="newNote()">New Note</md-button>
+        <md-content layout="row" style="overflow: scroll;">
+            <md-list>
+                <md-list-item ng-repeat="note in notes" class="md-2-line">
+                    <div class="md-list-item-text">
+                        <h3>{{note.title}}</h3>
+                        <p>{{note.message}}</p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-content>
 </div>
