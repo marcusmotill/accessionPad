@@ -45,6 +45,18 @@ The user selects an item from the navigation and is shown their notes on that se
 The user can add new notes by clicking `New Note`
 ![image](images/new_note.png)
 
+## Database query
+This is a sample query for interfacing with the NCBI API:
+```
+$http.get("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=" + $scope.search.database + "&term=" + $scope.search.query.replace(" ", "+"))
+                .then(function (success) {
+                    var json = x2js.xml_str2json(success.data);
+                    $scope.IdList = json.eSearchResult.IdList.Id;
+                    console.log(json);
+                }, function (error) {
+                    console.log(error);
+                });
+```
 
 ## Future Additions
 Since the application already receives all the data regarding a sequence from the eutilities API, the application could easily be modified to show the user those data entries in the GUI.  There could also be an addition of making this application modular by allowing other developers to create modules for their specific needs.  
