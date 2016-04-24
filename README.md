@@ -14,5 +14,12 @@ The graphical user interface and logic of the application is built with AngularJ
 - Install the [Electron commandline tool](https://github.com/electron-userland/electron-prebuilt)
 
 ### Building and running the tool
+- cd to the project directory
+- Run `npm install`
+- Run 'bower install`
+- Run `electron .` to run the program
 
+## User Interface
+### Login
+The login screen allows the user to either create an account or login with an existing account.
 
